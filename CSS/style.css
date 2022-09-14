@@ -1,13 +1,16 @@
-/* GRids with specific postioning */
-*{
-    opacity: 90%;
-}
-.container {
+[class*="container"] {
     display: grid;
     border: 1px solid black;
     height: 300px;
     width: 600px;
     margin: 20px;
+}
+
+/* GRids with specific postioning */
+
+
+.container {
+
     grid-template-columns: [first] 25% [second-col] 25% auto;
     grid-template-rows: 150px 150px;
 }
@@ -38,11 +41,7 @@
 /* GRids without specific postioning */
 
 .container2 {
-    display: grid;
-    border: 1px solid black;
-    height: 300px;
-    width: 600px;
-    margin: 20px;
+
     grid-template-columns: repeat(3, 100px); /*1fr 1fr 1fr*/
     grid-template-rows: auto; /*default auto*/
     column-gap: 10px;
@@ -61,4 +60,38 @@
 
 .box1 {
     justify-self: start;
+}
+
+/* grid area*/
+
+.container3 {
+  
+    grid-template-columns: repeat(4, 1fr); /*1fr 1fr 1fr*/
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "main header sidebar footer"
+        "header header header header"
+    ;
+    
+           
+}
+
+header {
+    background-color: blue;
+    grid-area: header;
+}
+
+main {
+    background-color: blueviolet;
+    grid-area: main;
+}
+
+aside {
+    background-color: greenyellow;
+    grid-area: sidebar;
+}
+
+footer {
+    background-color: burlywood;
+    grid-area: footer;
 }
