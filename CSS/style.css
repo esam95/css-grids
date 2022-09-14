@@ -71,7 +71,7 @@
     grid-template-areas: 
         "main header sidebar footer"
         "header header header header"
-        ;
+    ;
     
            
 }
