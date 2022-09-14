@@ -1,0 +1,36 @@
+/* GRids with specific postioning */
+*{
+    opacity: 90%;
+}
+.container {
+    display: grid;
+    border: 1px solid black;
+    height: 300px;
+    width: 600px;
+    margin: 20px;
+    grid-template-columns: [first] 25% [second-col] 25% auto;
+    grid-template-rows: 150px 150px;
+}
+
+.item-a {
+    background-color: blueviolet;
+    grid-column-start: first;
+    grid-column-end: span 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+.item-b {
+    background-color: skyblue;
+    grid-column-start: second-col;
+    grid-column-end: span 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+.item-c {
+    background-color: burlywood;
+
+}
