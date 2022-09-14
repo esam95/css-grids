@@ -34,3 +34,31 @@
     background-color: burlywood;
 
 }
+
+/* GRids without specific postioning */
+
+.container2 {
+    display: grid;
+    border: 1px solid black;
+    height: 300px;
+    width: 600px;
+    margin: 20px;
+    grid-template-columns: repeat(3, 100px); /*1fr 1fr 1fr*/
+    grid-template-rows: auto; /*default auto*/
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+
+    justify-items: stretch;
+    align-items: stretch;
+
+    justify-content: right;
+}
+
+[class*="box"] {
+    border: 1px solid black;
+}
+
+.box1 {
+    justify-self: start;
+}
